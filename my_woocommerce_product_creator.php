@@ -572,16 +572,13 @@ function uploadFileByUrl($image_url)
 
 function initialConfig()
 {
-	createProducts();
 	createCategories();
+	createProducts();
 }
 
 
-// add_action('wp_footer', 'initialConfig');
-// add_action('wp_footer', 'deleteProducts');
-
 add_action( "activate_plugin", "initialConfig");
-add_action( "deactivate_plugin", "deleteProducts");
+// add_action( "deactivate_plugin", "deleteProducts");
 
 
 
